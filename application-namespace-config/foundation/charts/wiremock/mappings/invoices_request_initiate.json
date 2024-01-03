@@ -1,0 +1,92 @@
+{
+    "request": {
+        "method": "POST",
+        "url": "/corporate/v1/Collections/Invoices/Initiate",
+        "headers": {
+            "Authorization": {
+                "equalTo": "test_sample"
+            },
+            "PayeeChannelId": {
+                "equalTo": "test"
+            }
+
+        },
+        "bodyPatterns": [
+            {
+                "equalToJson": {
+                    "InvoiceRequest": [
+                        {
+                            "InvoiceIndicator": "INVCREATE_E_VALIDATION",
+                            "PayeeChannelReference": "2304202010001",
+                            "PayeeBankReference": "",
+                            "BankBranchOrLocationReference": "",
+                            "RequestDate": "",
+                            "RequestTime": "",
+                            "PayeeUserId": "sunil",
+                            "Payload": {
+                                "PayeeActionBy": "",
+                                "PayeeID": "0012710986",
+                                "PayeeProductCode": "R2RCVJ",
+                                "PayeeBatchReference": "",
+                                "PayeeBatchReferenceDate": "",
+                                "Invoices": [
+                                    {
+                                        "Payer": {
+                                            "PayerId": "QAEIPP001",
+                                            "PayerAccountReference": "12345678901",
+                                            "PayerBankReference": "",
+                                            "PayerAccountType": "",
+                                            "PayerInvoiceTotalPayment": "100.00",
+                                            "PayerAgreementReference": ""
+                                        },
+                                        "PayeeProductInstanceReference": "",
+                                        "PayeeInvoiceReference": "INV000ABC1",
+                                        "PayeeInvoiceDate": "07-03-2023",
+                                        "PayeeInvoiceDueDate": "20-03-2023",
+                                        "CurrencyCode": "PHP",
+                                        "PayeeInvoiceAmount": "12500.78",
+                                        "TradeDiscountAmount": "",
+                                        "TaxAmount": "10.00",
+                                        "PayeeInvoiceDocumentURL": "a.b@test.com",
+                                        "Message": "",
+                                        "PayeeAddress": "",
+                                        "EarlyPaymentDiscount": {
+                                            "EarlyPaymentDays": "1",
+                                            "EarlyDiscountAmount": "100.00"
+                                        },
+                                        "LatePaymentPenalty": {
+                                            "GracePeriod": "3",
+                                            "PenaltyAmount": "100.00"
+                                        },
+                                        "AdditionalInformation": {
+                                            "SupplementaryData": {
+                                                "Message": ""
+                                            }
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "Links": {
+                        "Self": "string",
+                        "First": "string",
+                        "Prev": "string",
+                        "Next": "string",
+                        "Last": "string"
+                    },
+                    "Meta": {
+                        "TotalPages": 0,
+                        "FirstAvailableDateTime": "2023-04-18T02:53:21.075Z",
+                        "LastAvailableDateTime": "2023-04-18T02:53:21.075Z"
+                    }
+                },
+                "ignoreArrayOrder": true
+            }
+        ]
+    },
+    "response": {
+        "bodyFileName": "responses/invoices_response_initiate.json",
+        "status": 200
+    }
+}

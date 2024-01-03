@@ -1,0 +1,34 @@
+{
+    "InvoiceResponse": [
+        {
+            "InvoiceIndicator": "INVCREATE_E_VALIDATION",
+            "PayerChannelReferenceNumber": "2304202010001",
+            "PayerBankReference": null,
+            "RequestNumber": "2",
+            "RequestDate": "2020-05-27",
+            "RequestTime": "15:06:04",
+            "BankReference": null,
+            "BankIdentification": "050",
+            "BranchIdentification": "156",
+            "PayeeUserId": "sunil",
+            "Status": "SUCCESS",
+            "ErrorCode": "",
+            "ErrorMessage": "",
+            "Payload": {
+                "BankBranchOrLocationReference": null
+            }
+        }
+    ],
+    "Links": {
+        "Self": null,
+        "First": null,
+        "Prev": null,
+        "Next": null,
+        "Last": null
+    },
+    "Meta": {
+        "TotalPages": null,
+        "FirstAvailableDateTime": null,
+        "LastAvailableDateTime": null
+    }
+}

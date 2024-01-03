@@ -1,0 +1,13 @@
+{
+  "request": {
+      "method": "POST",
+      "url": "/v1/test2"
+  },
+  "response":{
+    "status":200,
+    "bodyFileName":"responses/response_1.json",
+    "headers":{
+       "Content-Type":"application/json"
+    }
+ }
+}

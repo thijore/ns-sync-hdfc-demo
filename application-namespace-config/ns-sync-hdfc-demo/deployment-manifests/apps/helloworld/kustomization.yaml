@@ -1,0 +1,11 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+helmGlobals:
+  chartHome: ../../../../foundation/charts
+
+helmCharts:
+  - releaseName: bdo-wire-transfer-ms
+    name: microservice-chart
+    version: 1.0.1 
+    valuesFile: values.yaml

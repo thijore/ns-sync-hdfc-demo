@@ -1,0 +1,20 @@
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  name: {{ include "microservice-chart.fullname" . }}
+spec:
+  gateways:
+  - default/httpbin-gateway
+  hosts:
+  - app01.eam.sit.bdo.com.ph
+  http:
+  - match:
+    - uri:
+        prefix: /{{ .Values.virtualservice.namespace }}/{{ include "microservice-chart.fullname" . }}/
+    rewrite:
+      uri: /
+    route:
+    - destination:
+        host: {{ include "microservice-chart.fullname" . }}.{{ .Values.virtualservice.namespace }}.svc.cluster.local
+        port:
+          number: {{ .Values.service.port }}
