@@ -5,7 +5,7 @@ helmGlobals:
   chartHome: ../../../../foundation/charts
 
 helmCharts:
-  - releaseName: helloworld
+  - releaseName: nginx
     name: microservice-chart
     version: 1.0.1 
     valuesFile: values.yaml

@@ -4,3 +4,5 @@ namespace: ns-sync-hdfc-demo
 
 resources:
 - ../apps/helloworld
+- ../apps/nginx
+- ../apps/k8/nginxk8
